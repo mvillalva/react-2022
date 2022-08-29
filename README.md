@@ -1,3 +1,3 @@
-# react-2022
+# React - CaC 4.0
 
-Ejercicios del curso React CaC 4.0
+Ejercicios del curso
