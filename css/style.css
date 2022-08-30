@@ -1,11 +1,5 @@
 .text-orange{
-  color: orange;
-}
-
-li {
-  margin-left: 15px;      
-  list-style: none;
-  line-height: 1.5;
+  color: #ff8800;
 }
 
 .link {
@@ -15,4 +9,8 @@ li {
 
 .link:hover {
   color: rgb(224, 255, 177);
+}
+
+.card {
+  min-height: 125px !important;
 }
