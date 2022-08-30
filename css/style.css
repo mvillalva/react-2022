@@ -1,0 +1,18 @@
+.text-orange{
+  color: orange;
+}
+
+li {
+  margin-left: 15px;      
+  list-style: none;
+  line-height: 1.5;
+}
+
+.link {
+  text-decoration: none;
+  color: greenyellow;
+}
+
+.link:hover {
+  color: rgb(224, 255, 177);
+}
