@@ -16,50 +16,49 @@
   position: relative !important;
 }
 
+.bg-black {
+  background-color: black;
+}
+
+.fs-sm {
+  font-size: .8rem;
+}
+
+.opacity-90 {
+  opacity: .9;
+}
+
 /* tooltips */
-.tooltip2 {
+.tooltip-3 {
   position: absolute;
-  right: 10px;  
+  height: 100%;
+  width: 100%;
+  transform: scale3d(0,0,1);
+  transition: all .3s ease-in-out;  
 }
 
-.tooltip2:before {
-  display: block;
-  opacity: 0;
-  pointer-events: none;
+.tooltip-icon {
   position: absolute;
+  top: 5px;
+  right: 10px;
+  z-index: 1;
 }
 
-.tooltip2:before {
-  position: absolute;
-  content: attr(data-title);
-  top: 0;
-  right: -1px;
-  width: 215px;
-  height: 115px;  
-  padding: 6px 10px;
-  font-size: 14px;
-  color: #fff;
-  background: rgba(0,0,0,.8);
-  border-radius: 5px;
+.tooltip-3 .tooltip-data {
+  height: 100%;
+  padding: 15px 0 0 0;
+  opacity: 0;  
   overflow: auto;
-}
-
-.tooltip2.fade2:before {
-  transform: translate3d(0,-10px,0);
-  transition: all .15s ease-in-out;
-}
-
-.tooltip2.fade2:hover:before {
-  opacity: 1;
-  transform: translate3d(0,0,0);
-}
-
-.tooltip2.expand:before {
   transform: scale3d(.2,.2,1);
-  transition: all .2s ease-in-out;
+  transition: all .3s ease-in-out;  
 }
 
-.tooltip2.expand:hover:before {
-  opacity: 1;
-  transform: scale3d(1,1,1);
+.tooltip-3 .tooltip-data ol {
+  width: 85%;  
+}
+
+.tooltip-icon:hover ~ .tooltip-3,
+.tooltip-icon:hover ~ .tooltip-3 .tooltip-data {
+  opacity: .9 !important;  
+  transform: scale3d(1,1,1); 
 }
