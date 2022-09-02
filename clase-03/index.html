@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/style.css">
+
+        <title>Clase 03 - React</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                  <div class="container">
+                    <a class="navbar-brand" href="../">React - CaC 4.0</a>
+                    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavId">
+                        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" aria-current="page">Inicio <span class="visually-hidden">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Enlace</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Desplegable</a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                    <a class="dropdown-item" href="#">Acción 1</a>
+                                    <a class="dropdown-item" href="#">Acción 2</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <form class="d-flex my-2 my-lg-0">
+                            <input class="form-control me-sm-2" type="text" placeholder="Buscar">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                        </form>
+                    </div>
+              </div>
+            </nav>
+                        
+        </header>                
+        <div class="row w-100">
+            <aside class="col-3 bg-dark">
+                <ul class="list-group list-group-numbered">
+                    <li class="list-group-item"><a href="" class="text-decoration-none">Item A</a></li>
+                    <li class="list-group-item"><a href="" class="text-decoration-none">Item B</a></li>
+                    <li class="list-group-item"><a href="" class="text-decoration-none">Item C</a></li>
+                    <li class="list-group-item"><a href="" class="text-decoration-none">Item D</a></li>
+                    <li class="list-group-item"><a href="" class="text-decoration-none">Item E</a></li>
+                    <li class="list-group-item"><a href="" class="text-decoration-none">Item F</a></li>
+                    <li class="list-group-item"><a href="" class="text-decoration-none">Item G</a></li>
+                    <li class="list-group-item"><a href="" class="text-decoration-none">Item H</a></li>
+                    <li class="list-group-item disabled">Disabled item</li>
+                </ul>
+            </aside>
+            <main class="col-9 mb-3">
+                <section class="p-2 my-3 bg-dark text-white rounded-3">
+                    <div class="container mb-3">
+                        <div class="row">
+                            <div class="col-12 col-md-3 col-lg-3">
+                                <label for="cantidad" class="form-label">Cantidad de videos</label>
+                                <div class="d-flex">
+                                    <input id="cantidad" name="cantidad" class="form-control me-2" type="number">
+                                    <button id="mostrar" class="btn btn-outline-info">Mostrar</button>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                    <ul id="video">
+                    </ul>
+                </section>
+              
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                
+                    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                </div>
+                
+                <section class="accordion mb-3" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Accordion Item #1
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        This is the first item's accordion body.
+                      </div>
+                    </div>
+                  </div>                  
+                </section>
+
+                <section class="row m-2 py-3 bg-dark rounded-3 text-white ">
+                    <form class="col-12 col-md-6 offset-md-3" action="">
+                        <div class="mb-1">
+                        <label for="" class="form-label">Email</label>
+                        <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelpId" placeholder="abc@mail.com" required>
+                        <small id="emailHelpId" class="form-text text-muted">Help text</small>
+                        </div>
+                        <div class="mb-1">
+                            <label for="" class="form-label">Password</label>
+                            <input type="password" class="form-control" name="pass" id="pass" placeholder="">
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Enviar</button>
+                    </form>
+                </section>
+                
+            </main>
+        </div>
+
+        <footer class="bg-dark text-light container-fluid py-5">
+            <div class="row">
+              <div class="col-12 col-md">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mb-2"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+                <small class="d-block mb-3 text-muted">© 2022</small>
+              </div>
+              <div class="col-6 col-md">
+                <h5>Features</h5>
+                <ul class="list-unstyled text-small">
+                  <li><a class="text-muted" href="#">Cool stuff</a></li>
+                  <li><a class="text-muted" href="#">Random feature</a></li>
+                  <li><a class="text-muted" href="#">Team feature</a></li>
+                  <li><a class="text-muted" href="#">Stuff for developers</a></li>
+                  <li><a class="text-muted" href="#">Another one</a></li>
+                  <li><a class="text-muted" href="#">Last time</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md">
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                  <li><a class="text-muted" href="#">Resource</a></li>
+                  <li><a class="text-muted" href="#">Resource name</a></li>
+                  <li><a class="text-muted" href="#">Another resource</a></li>
+                  <li><a class="text-muted" href="#">Final resource</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md">
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                  <li><a class="text-muted" href="#">Business</a></li>
+                  <li><a class="text-muted" href="#">Education</a></li>
+                  <li><a class="text-muted" href="#">Government</a></li>
+                  <li><a class="text-muted" href="#">Gaming</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md">
+                <h5>About</h5>
+                <ul class="list-unstyled text-small">
+                  <li><a class="text-muted" href="#">Team</a></li>
+                  <li><a class="text-muted" href="#">Locations</a></li>
+                  <li><a class="text-muted" href="#">Privacy</a></li>
+                  <li><a class="text-muted" href="#">Terms</a></li>
+                </ul>
+              </div>
+            </div>
+          </footer>
+
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+        <script src="./js/app.js"></script>
+    </body>
+</html>
