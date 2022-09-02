@@ -49,17 +49,27 @@
                         
         </header>                
         <div class="row w-100">
-            <aside class="col-3 bg-dark">
-                <ul class="list-group list-group-numbered">
-                    <li class="list-group-item"><a href="" class="text-decoration-none">Item A</a></li>
-                    <li class="list-group-item"><a href="" class="text-decoration-none">Item B</a></li>
-                    <li class="list-group-item"><a href="" class="text-decoration-none">Item C</a></li>
-                    <li class="list-group-item"><a href="" class="text-decoration-none">Item D</a></li>
-                    <li class="list-group-item"><a href="" class="text-decoration-none">Item E</a></li>
-                    <li class="list-group-item"><a href="" class="text-decoration-none">Item F</a></li>
-                    <li class="list-group-item"><a href="" class="text-decoration-none">Item G</a></li>
-                    <li class="list-group-item"><a href="" class="text-decoration-none">Item H</a></li>
-                    <li class="list-group-item disabled">Disabled item</li>
+            <aside class="navbar navbar-dark ps-4 col-2 bg-dark flex-column align-items-start">
+                <ul class="navbar-nav m-2">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" aria-current="page">Item A</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Item B</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Item C</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="#">Acción 1</a>
+                            <a class="dropdown-item" href="#">Acción 2</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="" class="nav-link">Item D</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Item E</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Item F</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Item G</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Item H</a></li>
+                    <li class="nav-item disabled text-secondary">Disabled item</li>
                 </ul>
             </aside>
             <main class="col-9 mb-3">
