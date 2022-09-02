@@ -4,6 +4,10 @@ li {
   list-style: none;
 }
 
+.bg-black {
+  background-color: #000;
+}
+
 .grow {
   transition: all .3s ease-in-out;
   border-radius: 5px;
