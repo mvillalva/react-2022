@@ -80,7 +80,7 @@ const mostrar_videos = () => {
   }                
 }
 
-window.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('mostrar').addEventListener('click', e => {
     mostrar_videos()
   })
