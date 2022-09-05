@@ -49,8 +49,7 @@ const mostrar_videos = () => {
   let nro_frame = 0
   video.innerHTML = ''
   
-  for (let index = 0; index < cantidad; index++) {
-    
+  for (let index = 0; index < cantidad; index++) {    
     video.innerHTML += html.replace('%iframe%',   videos[nro_frame].iframe)
                            .replace('%title%',    videos[nro_frame].title)
                            .replace('%subtitle%', videos[nro_frame].subtitle)
