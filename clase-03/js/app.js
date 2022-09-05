@@ -54,8 +54,8 @@ const mostrar_videos = () => {
                            .replace('%title%',    videos[nro_frame].title)
                            .replace('%subtitle%', videos[nro_frame].subtitle)
                            .replace('%extra%',    videos[nro_frame].extra)
-    nro_frame ++
-    if (nro_frame == 5) nro_frame = 0     
+
+    nro_frame = nro_frame === 4 ? 0 : nro_frame + 1
   }                
 }
 
