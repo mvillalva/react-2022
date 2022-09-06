@@ -164,32 +164,19 @@
                     <section id="s_list" class="bg-dark rounded-3 overflow-hidden pb-2 d-none" data-type="config">
                         <h5 class="bg-info text-dark text-center py-1">Lista de elementos</h5>
                         <form action="" class="row p-2">
-                            <div class="col-12 mb-2">
-                                <label for="v_src" class="form-label">Source</label>
-                                <input id="v_src"  class="form-control" type="text" placeholder="Ingrese el origen del video" required>
+                            <div class="col-3 mb-2">
+                                <label for="l_elements" class="form-label">Cantidad</label>
+                                <input id="l_elements"  class="form-control" type="number" required>
                             </div>
-                            <div class="col-6 mb-2">
-                                <label for="v_width" class="form-label">Width (opcional)</label>
-                                <input id="v_width"  class="form-control" type="number" placeholder="800">
-                            </div>
-                            <div class="col-6 mb-2">
-                                <label for="v_height" class="form-label">Height (opcional)</label>
-                                <input id="v_height"  class="form-control" type="number" placeholder="600">
-                            </div>
-                            <div class="col-6 mb-2">
-                                <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="v_controls" checked>
-                                <label class="form-check-label" for="v_controls">
-                                    Muestra controles
-                                </label>
-                                </div>                            
-                            </div>    
-                            <div class="col-6 mb-2">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="v_autoplay">
-                                    <label class="form-check-label" for="v_autoplay">
-                                    Autoplay
-                                    </label>
+                            <div class="col-9 mb-2">
+                                <div class="mb-3">
+                                    <label for="l_type" class="form-label">Tipo</label>
+                                    <select class="form-select" name="l_type" id="l_type">
+                                        <option value="image">Imagen</option>
+                                        <option value="number">Número</option>
+                                        <option value="object">Objeto</option>
+                                        <option value="string" selected>Texto</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="col-12 mb-2">

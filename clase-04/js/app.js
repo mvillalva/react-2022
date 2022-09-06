@@ -32,13 +32,20 @@ class Button {
 }
 
 class List {
-    constructor(elements, type) {}
+    constructor(elements, type) {
+        this.elements = elements
+        this.type = type
+    }
 }
 
 const limpiarPantalla = () => {
+    let view = document.getElementById('view')
     let s_config    = document.querySelectorAll('[data-type=config]')
-    s_config.forEach(e => {
-        console.log(e)
+
+    view.innerHTML = ''
+    view.classList.add('d-none')
+
+    s_config.forEach(e => {        
         e.classList.add('d-none')
     })
 }
@@ -141,17 +148,15 @@ b_create.addEventListener('click', e => {
 
 l_create.addEventListener('click', e => {
     e.preventDefault()
-    let l_text       = document.getElementById('b_text').value
-    let l_width     = parseInt(document.getElementById('b_width').value)
-    let l_height    = parseInt(document.getElementById('b_height').value)
-    let l_color     = document.getElementById('b_color').value
+    let l_elements  = document.getElementById('l_elements').value
+    let l_type      = document.getElementById('l_type').value
     
-    if(!l_text.trim()) {
-        alert('Ingrese el texto')
+    if(!l_elements.trim()) {
+        alert('Ingrese la cantidad de elementos')
         return
     }
 
-    let myList = new List(b_text, b_width?b_width:50, b_height?b_height:25, b_color)
+    let myList = new List(l_elements, l_type)
     
     mostrar_objeto(myList)
 })
