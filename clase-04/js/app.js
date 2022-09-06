@@ -104,7 +104,7 @@ v_create.addEventListener('click', e => {
     let v_autoplay  = document.getElementById('v_autoplay').checked    
 
     if(!v_src.trim()) {
-        alert('Ingrese el Source')
+        alert('Ingrese el origen')
         return
     }
 
@@ -120,7 +120,7 @@ a_create.addEventListener('click', e => {
     let a_autoplay  = document.getElementById('a_autoplay').checked
     
     if(!a_src.trim()) {
-        alert('Ingrese el Source')
+        alert('Ingrese el origen')
         return
     }
 
