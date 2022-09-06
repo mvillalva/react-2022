@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/839d419ad8.js" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/style.css">
+
+        <title>Clase 04 - React</title>
+    </head>
+    <body class="bg-dark d-flex flex-column min-vh-100">
+        <header>
+            <nav class="navbar navbar-expand-md  bg-light">
+                  <div class="container">
+                    <a class="navbar-brand" href="../">React - CaC 4.0</a>
+                    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavId">
+                        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" aria-current="page">Inicio</a>
+                            </li>
+                        </ul>                        
+                    </div>
+              </div>
+            </nav>
+                        
+        </header>                
+        <div class="container">
+            <main class="mb-3">
+                <section class="p-3 my-3 bg-black text-white rounded-3">
+                    <h4 class="mb-3">Seleccione el objeto que desea crear</h4>
+                    <div class="btn-group mb-3" role="group" aria-label="grupo de opciones">
+                      <input type="radio" class="btn-check" name="btnradio" id="video" autocomplete="off">
+                      <label class="btn btn-outline-info" for="video">Video</label>
+                    
+                      <input type="radio" class="btn-check" name="btnradio" id="audio" autocomplete="off">
+                      <label class="btn btn-outline-info" for="audio">Audio</label>
+                    
+                      <input type="radio" class="btn-check" name="btnradio" id="button" autocomplete="off">
+                      <label class="btn btn-outline-info" for="button">Botón</label>
+
+                      <input type="radio" class="btn-check" name="btnradio" id="list" autocomplete="off">
+                      <label class="btn btn-outline-info" for="list">Lista de elementos</label>
+                    </div>                    
+                    
+                    <section id="s_video" class="bg-dark rounded-3 overflow-hidden pb-2 d-none" data-type="config">
+                        <h5 class="bg-info text-dark text-center py-1">Video</h5>
+                        <form action="" class="row p-2">
+                            <div class="col-12 mb-2">
+                                <label for="v_src" class="form-label">Source</label>
+                                <input id="v_src"  class="form-control" type="text" placeholder="Ingrese el origen del video" required>
+                            </div>
+                            <div class="col-6 mb-2">
+                                <label for="v_width" class="form-label">Width (opcional)</label>
+                                <input id="v_width"  class="form-control" type="number" placeholder="800">
+                            </div>
+                            <div class="col-6 mb-2">
+                                <label for="v_height" class="form-label">Height (opcional)</label>
+                                <input id="v_height"  class="form-control" type="number" placeholder="600">
+                            </div>
+                            <div class="col-6 mb-2">
+                                <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="v_controls" checked>
+                                <label class="form-check-label" for="v_controls">
+                                    Muestra controles
+                                </label>
+                                </div>                            
+                            </div>    
+                            <div class="col-6 mb-2">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="v_autoplay">
+                                    <label class="form-check-label" for="v_autoplay">
+                                    Autoplay
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <div class="d-grid gap-2">
+                                    <button type="submit" name="v_create" id="v_create" class="btn btn-outline-info">Crear</button>
+                                </div>                            
+                            </div>
+                        </form>
+                    </section>
+
+                    <section id="s_audio" class="bg-dark rounded-3 overflow-hidden pb-2 d-none" data-type="config">
+                        <h5 class="bg-info text-dark text-center py-1">Audio</h5>
+                        <form action="" class="row p-2">
+                            <div class="col-12 mb-2">
+                                <label for="a_src" class="form-label">Source</label>
+                                <input id="a_src"  class="form-control" type="text" placeholder="Ingrese el origen del audio" required>
+                            </div>                            
+                            <div class="col-6 mb-2">
+                                <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="a_controls" checked>
+                                <label class="form-check-label" for="a_controls">
+                                    Muestra controles
+                                </label>
+                                </div>                            
+                            </div>    
+                            <div class="col-6 mb-2">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="a_autoplay">
+                                    <label class="form-check-label" for="a_autoplay">
+                                    Autoplay
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-2">                                
+                                <label for="a_volumen" class="form-label">Volumen: <span id="a_vol_number">100</span></label>
+                                <input type="range" class="form-range" min="0" max="100" id="a_volumen" value="100">
+                            </div>
+                            <div class="col-12 mb-2">
+                                <div class="d-grid gap-2">
+                                    <button type="submit" name="v_create" id="a_create" class="btn btn-outline-info">Crear</button>
+                                </div>                            
+                            </div>
+                        </form>
+                    </section>
+
+                    <section id="s_button" class="bg-dark rounded-3 overflow-hidden pb-2 d-none" data-type="config">
+                        <h5 class="bg-info text-dark text-center py-1">Botón</h5>
+                        <form action="" class="row p-2">
+                            <div class="col-12 mb-2">
+                                <label for="b_text" class="form-label">Texto</label>
+                                <input id="b_text"  class="form-control" type="text" placeholder="Ingrese el texto del botón" required>
+                            </div>
+                            <div class="col-6 mb-2">
+                                <label for="b_width" class="form-label">Width (opcional)</label>
+                                <input id="b_width"  class="form-control" type="number" placeholder="50">
+                            </div>
+                            <div class="col-6 mb-2">
+                                <label for="b_height" class="form-label">Height (opcional)</label>
+                                <input id="b_height"  class="form-control" type="number" placeholder="25">
+                            </div>
+                            <div class="col-6 mb-2">
+                                <div class="mb-3">
+                                    <label for="b_color" class="form-label">Color</label>
+                                    <select class="form-select" name="b_color" id="b_color">
+                                        <option value="yellow">Amarillo</option>
+                                        <option value="blue" selected>Azul</option>
+                                        <option value="white">Blanco</option>
+                                        <option value="black">Negro</option>
+                                        <option value="red">Rojo</option>
+                                        <option value="green">Verde</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <div class="d-grid gap-2">
+                                    <button type="submit" name="v_create" id="b_create" class="btn btn-outline-info">Crear</button>
+                                </div>                            
+                            </div>
+                        </form>
+                    </section>
+
+                    <section id="s_list" class="bg-dark rounded-3 overflow-hidden pb-2 d-none" data-type="config">
+                        <h5 class="bg-info text-dark text-center py-1">Lista de elementos</h5>
+                        <form action="" class="row p-2">
+                            <div class="col-12 mb-2">
+                                <label for="v_src" class="form-label">Source</label>
+                                <input id="v_src"  class="form-control" type="text" placeholder="Ingrese el origen del video" required>
+                            </div>
+                            <div class="col-6 mb-2">
+                                <label for="v_width" class="form-label">Width (opcional)</label>
+                                <input id="v_width"  class="form-control" type="number" placeholder="800">
+                            </div>
+                            <div class="col-6 mb-2">
+                                <label for="v_height" class="form-label">Height (opcional)</label>
+                                <input id="v_height"  class="form-control" type="number" placeholder="600">
+                            </div>
+                            <div class="col-6 mb-2">
+                                <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="v_controls" checked>
+                                <label class="form-check-label" for="v_controls">
+                                    Muestra controles
+                                </label>
+                                </div>                            
+                            </div>    
+                            <div class="col-6 mb-2">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="v_autoplay">
+                                    <label class="form-check-label" for="v_autoplay">
+                                    Autoplay
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <div class="d-grid gap-2">
+                                    <button type="submit" name="v_create" id="l_create" class="btn btn-outline-info">Crear</button>
+                                </div>                            
+                            </div>
+                        </form>
+                    </section>
+
+                    <section>
+                        <div id="view" class="fs-3 p-2 my-2 bg-danger rounded-3 d-none overflow-auto"></div>
+                    </section>
+                </section>
+
+            </main>
+        </div>
+
+        <footer class="bg-light text-dark container-fluid py-5 mt-auto">
+            <div class="row">
+              <div class="col-12 col-md">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mb-2"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+                <small class="d-block mb-3 text-muted">© 2022</small>
+              </div>              
+              <div class="col-6 col-md">
+                <h5>Projects</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-secondary text-decoration-none" href="#" target="_blank">Python Web</a></li>
+                    <li><a class="text-secondary text-decoration-none" href="http://www.maxleonv.com:8085/tp-php/" target="_blank">PHP Web</a></li>
+                    <li><a class="text-secondary text-decoration-none" href="https://mvillalva.github.io/TP-Integrador-PHP/" target="_blank">Landing Page</a></li>
+                    <li><a class="text-secondary text-decoration-none" href="https://lasantedanslamaison.com" target="_blank">La Sante dans la Maison</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md">
+                <h5 class="text-warning fw-bolder">About Me</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-secondary text-decoration-none" href="https://www.maxleonv.com" target="_blank"><i class="fa-solid fa-earth-americas fs-5"></i> WebPage</a></li>                  
+                    <li><a class="text-secondary text-decoration-none" href="https://github.com/mvillalva" target="_blank"><i class="fa-brands fa-github fs-5"></i> GitHub</a></li>
+                    <li><a class="text-secondary text-decoration-none" href="https://www.linkedin.com/in/maximiliano-villalva/" target="_blank"><i class="fa-brands fa-linkedin fs-5"></i> Linkedin</a></li>
+                </ul>
+              </div>
+            </div>
+          </footer>
+
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+        <script defer src="./js/app.js"></script>
+    </body>
+</html>
