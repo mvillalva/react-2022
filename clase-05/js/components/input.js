@@ -11,6 +11,21 @@ export default class Input {
     this.label_css = label_css
   }
 
+  verify() {
+    let input = document.getElementById(this.id)
+    input.addEventListener('keyup', e => {
+      let valor = e.target.value
+      if(valor.length > 3){
+        input.classList.add('ok')
+        input.classList.remove('error')
+      }
+      else {
+        input.classList.remove('ok')
+        input.classList.add('error')
+      }
+    })
+  }
+
   render() {
     let html =''
     if (this.label) {

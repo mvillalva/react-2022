@@ -26,6 +26,7 @@ myApp.innerHTML = ` <div class="row mb-2">
                       </div>
                       <div class="col-12 col-md-6 text-light">
                         <h2>Formulario</h2>
+                        <h5 class="mb-2">Escriba más de 3 caracteres</h5>
                         ${myForm.render()}
                       </div>
                     </div>                        
@@ -42,3 +43,6 @@ form1.innerHTML = ` ${myText.render()}
                     ${myPassword.render()}
                     ${mySubmit.render()}
                   `
+myText.verify()
+myEmail.verify()
+myPassword.verify()
