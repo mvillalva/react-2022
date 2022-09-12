@@ -32,7 +32,7 @@ myApp.innerHTML = ` <div class="row mb-2">
                         </div>
                       </div>
                       <div class="col-12 col-md-6 text-light">
-                        <h2>Componente Formulario</h2>                        
+                        <h2>Componente Form</h2>                        
                         ${myForm.render()}
                       </div>
                     </div>
