@@ -20,19 +20,20 @@ let myPassword = new Input('password', 'password1', 'password1', '', 'Ingrese su
 myApp.innerHTML = ` <div class="row mb-2">
                       <div class="col-12 col-md-6">
                         <div class="video">
-                          <h1 class="video-title text-light bg-dark rounded-3 p-2 opacity-75">Componentes</h1>
+                          <h1 class="video-title text-light bg-dark rounded-3 p-2 opacity-75">Componente Video</h1>
                           ${myVideo.render()}
                         </div>
                       </div>
                       <div class="col-12 col-md-6 text-light">
-                        <h2>Formulario</h2>
-                        <h5 class="mb-2">Escriba más de 3 caracteres</h5>
+                        <h2>Componente Formulario</h2>                        
                         ${myForm.render()}
                       </div>
-                    </div>                        
+                    </div>
+                    <h3>Componente Audio</h3>
                     ${myAudio.render()}
-                    <br><br>
+                    <h3 class="mt-3">Componente Botón</h3>
                     ${myButton.render()}
+                    <h3 class="mt-3">Componente List</h3>
                     ${myList.render()}
                   `
 myAudio.volumen(.5)
