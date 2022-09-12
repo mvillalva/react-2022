@@ -14,7 +14,7 @@ let myList = new List(['Elemento 1', 'Elemento 2', new Button('Elemento 3', 'btn
 let myForm = new Form('form1', '', '', 'row w-100')
 let myText = new Input('text', 'text1', 'text1', '', 'Ingrese su nombre', 'form-control mb-2', 'required', 'Nombre', 'form-label')
 let myEmail = new Input('email', 'email1', 'email1', '', 'Ingrese su email', 'form-control mb-2', 'required', 'Email', 'form-label')
-let mySubmit = new Input('submit', 'submit1', 'submit1', 'Enviar', '', 'btn btn-primary mb-2', '', '', '')
+let mySubmit = new Input('submit', 'submit1', 'submit1', 'Enviar', '', 'btn btn-primary w-100 mb-2', '', '', '')
 let myPassword = new Input('password', 'password1', 'password1', '', 'Ingrese su contraseña', 'form-control mb-2', 'required', 'Contraseña', 'form-label')
 
 myApp.innerHTML = ` <div class="row mb-2">
