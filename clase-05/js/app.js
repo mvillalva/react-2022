@@ -38,7 +38,7 @@ myApp.innerHTML = ` <div class="row mb-2">
                     </div>
                     <h3>Componente Audio</h3>
                     ${myAudio.render()}
-                    <h3 class="mt-3">Componente Botón</h3>
+                    <h3 class="mt-3">Componente Button</h3>
                     ${myButton.render()}
                     <h3 class="mt-3">Componente List</h3>
                     ${myList.render()}
