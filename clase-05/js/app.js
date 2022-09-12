@@ -7,15 +7,22 @@ import Form from './components/form.js'
 
 const myApp = document.getElementById('myApp')
 
-let myButton = new Button('Login', 'btn btn-outline-info')
+let elementos = [
+  'Elemento 1', 
+  'Elemento 2', 
+  new Button('Elemento 3', 'btn btn-warning'),
+  new Button('Elemento 4', 'btn btn-danger'),
+]
+
+let myList = new List(elementos, 'text-light my-2')
 let myVideo = new Video('./video/video.mp4', 0, 0, 'video/mp4', 'video1', 'rounded-3 w-100', true, true, true)
 let myAudio = new Audio('./audio/audio.mp3', 'audio/mpeg', 'audio1', '', 'controls autoplay loop')
-let myList = new List(['Elemento 1', 'Elemento 2', new Button('Elemento 3', 'btn btn-success')], 'text-light my-2')
+let myButton = new Button('Login', 'btn btn-outline-info')
 let myForm = new Form('form1', '', '', 'row w-100')
 let myText = new Input('text', 'text1', 'text1', '', 'Ingrese su nombre', 'form-control mb-2', 'required', 'Nombre', 'form-label')
 let myEmail = new Input('email', 'email1', 'email1', '', 'Ingrese su email', 'form-control mb-2', 'required', 'Email', 'form-label')
-let mySubmit = new Input('submit', 'submit1', 'submit1', 'Enviar', '', 'btn btn-primary w-100 mb-2', '', '', '')
 let myPassword = new Input('password', 'password1', 'password1', '', 'Ingrese su contraseña', 'form-control mb-2', 'required', 'Contraseña', 'form-label')
+let mySubmit = new Input('submit', 'submit1', 'submit1', 'Enviar', '', 'btn btn-primary w-100 mb-2', '', '', '')
 
 myApp.innerHTML = ` <div class="row mb-2">
                       <div class="col-12 col-md-6">
