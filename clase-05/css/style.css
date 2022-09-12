@@ -16,27 +16,37 @@ li {
 }
 
 .ok {
-  border: 3px solid rgba(89, 253, 13, 0.808);
+  border: 3px solid rgba(89, 253, 13, 0.5);
 }
 
 .ok:focus {
-  border: 1px solid rgba(89, 253, 13, 0.808);
-  box-shadow: 0 0 0 .25rem rgba(89, 253, 13, 0.808);
-}
-
-.ok::after {
-  
+  border: 1px solid rgba(89, 253, 13, 0.5);
+  box-shadow: 0 0 0 .25rem rgba(89, 253, 13, 0.5);
 }
 
 .error {
-  border: 3px solid rgba(253, 13, 13, 0.808);
+  border: 3px solid rgba(253, 13, 13, 0.5);
 }
 
 .error:focus {
-  border: 1px solid rgba(253, 13, 13, 0.808);
-  box-shadow: 0 0 0 .25rem rgba(253, 13, 13, 0.808);
+  border: 1px solid rgba(253, 13, 13, 0.5);
+  box-shadow: 0 0 0 .25rem rgba(253, 13, 13, 0.5);
 }
 
-.error::after {
+.input-content{
+  position: relative;
+}
 
+.input-icon {
+  position: absolute;
+  top: 12px;
+  right: 20px;  
+}
+
+.text-ok {
+  color: rgb(89, 253, 13)
+}
+
+.text-error {  
+  color: rgb(253, 13, 13);
 }
