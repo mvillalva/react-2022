@@ -9,7 +9,7 @@ export default class Audio extends Component {
     let css = this.props.css
 
     return (
-              <audio className={css} controls>
+              <audio className={css} controls autoPlay loop>
                 <source src={'.'+url} type={type} />
               </audio>
             )
