@@ -8,7 +8,7 @@ export default class Video extends Component{
     let css = this.props.css
     return (
               <video className={css} controls>
-                <source src={url} type={type} />
+                <source src={'.'+url} type={type} />
               </video>
             )
   }

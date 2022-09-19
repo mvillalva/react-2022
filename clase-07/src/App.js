@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />        
+        <img src={'.'+logo} className="App-logo" alt="logo" />        
         <br></br>
         <h1>Componente Button</h1>
         <Button label="Login"/>
