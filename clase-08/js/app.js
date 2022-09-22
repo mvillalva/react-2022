@@ -2,7 +2,7 @@
 
 const ReactElement = React.createElement
 
-export default class Button extends React.Component {
+export class Button extends React.Component {
 
   render() {
     return ReactElement(
@@ -14,6 +14,25 @@ export default class Button extends React.Component {
 
 }
 
+export class Video extends React.Component {
+
+  render() {
+    return ReactElement(
+      'video',
+      { 
+        'controls':true,
+        'autoPlay': true,
+        'className':'rounded-3',
+        'id' : 'video'
+       },
+    )    
+  }
+
+}
+
 const domContainer = document.getElementById('myApp')
 
-ReactDOM.render(ReactElement(Button), domContainer)
+ReactDOM.render(ReactElement(Video), domContainer)
+
+const video = document.getElementById('video')
+video.innerHTML= '<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">'
