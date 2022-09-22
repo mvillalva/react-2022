@@ -25,6 +25,10 @@ export class Video extends React.Component {
         'className':'rounded-3',
         'id' : 'video'
        },
+       ReactElement('source', {
+        'src':'https://www.w3schools.com/html/mov_bbb.mp4',
+        'type':'video/mp4'
+       })
     )    
   }
 
@@ -33,6 +37,3 @@ export class Video extends React.Component {
 const domContainer = document.getElementById('myApp')
 
 ReactDOM.render(ReactElement(Video), domContainer)
-
-const video = document.getElementById('video')
-video.innerHTML= '<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">'
