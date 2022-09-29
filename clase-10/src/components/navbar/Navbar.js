@@ -1,12 +1,14 @@
-import React, { Component } from "react";
-import logo from '../../assets/img/logo.png'
+import React from "react";
 
-export default class Navbar extends Component {
-    render() {
+export default function Navbar(props) {    
         return (
             <>
-                <img src={ logo } width={ 60 } alt="logo-navbar"></img>
+                <img src={ props.src } width={ props.size } alt="logo-navbar"></img>
             </>
-        )
-    }
+        )    
+}
+
+
+Navbar.defaultProps = {
+    size: 60
 }

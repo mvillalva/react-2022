@@ -7,10 +7,12 @@ import {Video} from './components/video/Video';
 import img from './assets/img/logo.png';
 import aud from './assets/sound/audio.mp3'
 import vid from './assets/video/video.mp4'
+import img from './assets/img/logo.png';
 
 function App() {
   return (
-    <div className="App">      
+    <div className="App">
+      <Navbar src={img} />         
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <br />
