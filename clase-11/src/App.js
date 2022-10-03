@@ -42,15 +42,20 @@ const images = [
 
 function App() {    
     const imageList = images.filter(src => {
-        if (src.index % 1 === 0)
+        if (src.index % 2 === 0){
+            src.css = "text-danger"
             return src
-        return null
+        } else {
+            src.css = "text-warning"
+            return src
+        }
 
-    }).map(e => <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3"><Image src={e.src} label={e.index}/></div>);
+    }).map(e => <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3"><Image src={e.src} label={e.index} css={e.css}/></div>);
 
     return (
         <div className="App">
             <h1>Lista de Imágenes</h1>
+            <h4 className="mb-3">Con "filter" muestra los números impares en <span className="text-warning">Amarillo</span> y los pares en <span className="text-danger">Rojo</span> </h4>
             <div className="row w-100 text-center">
                 {imageList}
             </div>
