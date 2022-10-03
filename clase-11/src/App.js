@@ -42,8 +42,9 @@ const images = [
 
 function App() {    
     const imageList = images.filter(src => {
-        if (src.index % 1 == 0)
+        if (src.index % 1 === 0)
             return src
+        return null
 
     }).map(e => <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3"><Image src={e.src} label={e.index}/></div>);
 
