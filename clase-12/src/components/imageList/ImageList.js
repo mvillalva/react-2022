@@ -27,7 +27,7 @@ export default function ImageList() {
 
   const removeImage = () => {
     if (count > 1){      
-      const auxImages = images.filter(img => img.index != count-1)
+      const auxImages = images.filter(img => img.index !== count-1)
       setImages(auxImages)
       setCount(count - 1)
     }    
