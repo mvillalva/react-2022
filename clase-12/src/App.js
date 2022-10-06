@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import Movies from './movies/Movies';
+import Contador from './Contador';
+import ImageList from './Image/ImageList';
+
+const myData = [
+  {Framework : 'Bootstrap'},
+  {Framework : 'Material'},
+  {Framework : 'tailwind'},
+  {Framework : 'Next'},
+]
 
 function App() {
+
+  const myDataList = myData.map( e => e.Framework)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Listado de imágenes</h1>
+      <ImageList />
+      {/* <Contador />
+      <br />
+      <Movies data={myDataList}>
+        <h1>Hello world!</h1>
+        <small>Hola</small>
+      </Movies> */}
     </div>
   );
 }
