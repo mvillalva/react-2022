@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import Button from 'react-bootstrap/Button';
+import {Button, Row, Col} from 'react-bootstrap';
 import Image from "../image/Image";
 import './ImageList.css';
 
@@ -39,13 +39,13 @@ export default function ImageList() {
         <Button className="btn-size me-2" variant="success" onClick={addImage} title="Agregar"><i className="fas fa-circle-plus"></i></Button>        
         <Button className="btn-size" variant="danger" onClick={removeImage} title="Borrar"><i className="fas fa-trash"></i></Button>        
       </div>
-      <div className="row mx-2 text-center">
+      <Row className="mx-2 text-center">
         {
-          images.map(img => <div className="col-12 col-sm-6 col-md-4 col-lg-3 p-2">
+          images.map(img => <Col xs="12" sm="6" md="4" lg="3" className="p-2">
                               <Image src={img.src} label={img.index} css={img.css}/>
-                            </div>)
+                            </Col>)
         }
-      </div>
+      </Row>
     </>
   )
 }
