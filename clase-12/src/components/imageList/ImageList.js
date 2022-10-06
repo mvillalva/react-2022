@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import Button from 'react-bootstrap/Button';
-import Image from "../Image/Image";
+import Image from "../image/Image";
 import './ImageList.css';
 
 export default function ImageList() {
