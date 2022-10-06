@@ -1,30 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Movies from './movies/Movies';
-import Contador from './Contador';
-import ImageList from './Image/ImageList';
+import ImageList from './components/imageList/ImageList';
 
-const myData = [
-  {Framework : 'Bootstrap'},
-  {Framework : 'Material'},
-  {Framework : 'tailwind'},
-  {Framework : 'Next'},
-]
-
-function App() {
-
-  const myDataList = myData.map( e => e.Framework)
-
+function App() {  
   return (
-    <div className="App">
+    <div className="App container-fluid">
       <h1>Listado de imágenes</h1>
-      <ImageList />
-      {/* <Contador />
-      <br />
-      <Movies data={myDataList}>
-        <h1>Hello world!</h1>
-        <small>Hola</small>
-      </Movies> */}
+      <ImageList />      
     </div>
   );
 }
