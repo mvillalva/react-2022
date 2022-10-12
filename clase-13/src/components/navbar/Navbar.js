@@ -19,7 +19,7 @@ export default function Navbar(props) {
     return (
         <>            
             <ThemeContext.Provider value={theme}>
-                <Switch set={toogleTheme}></Switch>
+                <Switch set={toogleTheme} />
                 <ProfileColor />                
             </ThemeContext.Provider>
         </>

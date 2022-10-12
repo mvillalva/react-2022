@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
+import ThemeContext from "../../context/MainContext";
+import './Switch.css'
 
-export default function Switch(props) {
+export default function Switch(props) {  
+    const theme = useContext(ThemeContext)  
+
     return (
-        <>
-            <span>☀️</span>
-            <label className="toggle-theme" htmlFor="checkbox">
-                <input onChange={props.set} type="checkbox" id="checkbox" />
-                <div className="slider round d-inline"></div>
-            </label>
-            <span>🌒</span>
-        </>
+        <div style={theme}>
+            <div class="container">
+                <span className="fs-4 me-1">☀️</span>
+                <label class="switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" onChange={props.set}/>
+                    <div class="slider round"></div>
+                </label>
+                <span className="fs-4 ms-1">🌒</span>
+            </div>
+        </div>
     );
 }
