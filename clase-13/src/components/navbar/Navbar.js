@@ -10,16 +10,11 @@ const ProfileColor = (props) => {
 
 export default function Navbar(props) {   
     const [theme, setTheme] = useState(themes.light)
-
-    const toogleTheme = () => 
-        theme === themes.dark? 
-        setTheme(themes.light) :
-        setTheme(themes.dark)
-
+    
     return (
         <>            
             <ThemeContext.Provider value={theme}>
-                <Switch set={toogleTheme}></Switch>
+                <Switch set={setTheme}></Switch>
                 <ProfileColor />                
             </ThemeContext.Provider>
         </>
