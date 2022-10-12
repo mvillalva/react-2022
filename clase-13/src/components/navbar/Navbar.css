@@ -1,0 +1,8 @@
+.dark {
+  background-color: rgb(255, 78, 78);
+}
+
+.light {
+  background-color: rgb(203, 225, 255);
+  transition: 300ms ease-in ;
+}
