@@ -1,25 +1,18 @@
-import { useState } from 'react';
 import './App.css';
 import Navbar from './components/navbar/Navbar';
-import { ThemeContextProvider, themes } from './context/ThemeContext';
+import ThemeProvider from './context/ThemeContext';
 
 function App() {
-  const [theme, setTheme] = useState(themes.light)
-
-    const toogleTheme = () => 
-        theme === themes.dark? 
-        setTheme(themes.light) :
-        setTheme(themes.dark)
-
+  
   return (
-    <ThemeContextProvider>
+    <ThemeProvider>
       <div className="App">
-        <Navbar toogleTheme={toogleTheme} style={theme} />
-        <header className="App-header" style={theme}>
+        <Navbar />
+        <header className="App-header" >
 
         </header>
       </div>
-    </ThemeContextProvider>
+    </ThemeProvider>
   );
 }
 

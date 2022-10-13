@@ -1,31 +1,21 @@
+import MainContext, {themes} from './MainContext';
 import React, { useState } from "react";
 
-export const themes = {
-    dark : {
-        color: 'white',
-        background: '#282c34',
-        padding: '15px',
-        transition: '200ms ease-in' 
-    },
-    light : {
-        color: 'black',
-        background: 'white',
-        padding: '15px',
-        transition: '200ms ease-in' 
+const ThemeProvider = ({children}) => {
+    const [theme, setTheme] = useState(themes.light)
+
+    const toogleDarkMode = (e, selectedTheme) => {        
+        let theme = (selectedTheme.color === 'black') ? themes.dark : themes.light
+        console.log(theme)
+        setTheme(theme)
     }
-};
-
-const Context = React.createContext()
-
-export function ThemeContextProvider({children}) {
-    const [theme, setTheme] = useState(themes.light)    
 
     return (
-        <Context.Provider value={{theme, setTheme}}>
+        <MainContext.Provider value={{theme, toogleDarkMode}}>
             {children}
-        </Context.Provider>
+        </MainContext.Provider>
     )
 
 }
 
-export default Context
+export default ThemeProvider  

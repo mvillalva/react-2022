@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import Switch from "./Switch";
 import "./Navbar.css";
+import MainContext from "../../context/MainContext";
 
-const ProfileColor = ({style}) => {
-    return <div style={style} className="fs-1">Utilizando UseContext!</div>;
+const ProfileColor = () => {
+    const { theme } = useContext(MainContext);
+    return <div style={theme} className="fs-1">Utilizando UseContext!</div>;
 }
 
-export default function Navbar(props) {
+export default function Navbar(props) {    
     return (
         <>
-            <Switch toogleTheme={props.toogleTheme} style={props.style} />
-            <ProfileColor style={props.style} />            
+            <Switch />
+            <ProfileColor />            
         </>
     );
 }
