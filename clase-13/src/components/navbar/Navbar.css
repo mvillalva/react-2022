@@ -1,7 +1,9 @@
 .dark {
-  background-color: black;
+  background-color: #282c34;
+  color: white
 }
 
 .light {
-  background-color: aqua;
+  background-color: yellow;
+  color: #282c34;
 }

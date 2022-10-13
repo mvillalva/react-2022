@@ -5,7 +5,7 @@ import './Navbar.css';
 
 function ProfileColor() {
     const { darkMode } = React.useContext(MainContext);
-    const style = darkMode ? 'dark': 'ligth';
+    const style = darkMode ? 'dark': 'light';
     
     return (
         <div className={style }>
