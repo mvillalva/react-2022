@@ -7,11 +7,11 @@ export default function Switch(props) {
 
     return (
         <div style={theme}>
-            <div class="container">
+            <div className="container">
                 <span className="fs-4 me-1">☀️</span>
-                <label class="switch" for="checkbox">
+                <label className="switch">
                     <input type="checkbox" id="checkbox" onChange={props.set}/>
-                    <div class="slider round"></div>
+                    <div className="slider round"></div>
                 </label>
                 <span className="fs-4 ms-1">🌒</span>
             </div>

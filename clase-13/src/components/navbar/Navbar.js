@@ -15,12 +15,12 @@ export default class Navbar extends Component {
 
     render() {
         const toogleTheme = () => 
-        this.props.theme === themes.dark? 
-        this.props.set(themes.light) :
-        this.props.set(themes.dark)
+        this.props.state.theme === themes.dark? 
+        this.props.state.setTheme(themes.light) :
+        this.props.state.setTheme(themes.dark)        
 
         return (<>            
-            <ThemeContext.Provider value={this.props.theme}>
+            <ThemeContext.Provider value={this.props.state.theme}>
                 <Switch set={toogleTheme} />
                 <ProfileColor />                
             </ThemeContext.Provider>

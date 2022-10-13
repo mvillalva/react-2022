@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar theme={theme} set={setTheme} />
+      <Navbar state={{theme: theme, setTheme: setTheme}}/>
       <header className="App-header">
         
       </header>
