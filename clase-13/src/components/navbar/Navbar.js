@@ -18,11 +18,7 @@ export default class Navbar extends Component{
     // Constructor del componente, nos aseguramos de que tenga lo que necesita.
     constructor(props) {
         super();
-        
-        
-        
         console.log("Se construyo el navbar");
-
     }
 
     // Metodo render, dentro del ciclo de vida del componente
